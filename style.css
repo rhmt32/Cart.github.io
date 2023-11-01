@@ -1,0 +1,130 @@
+.navbar {
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.navbar a {
+  font-weight: 600;
+  font-family: "Gabarito", sans-serif;
+  font-size: 20px;
+  text-shadow: rgba(0, 0, 0, 0.25) 2.6px 2.6px 2.6px;
+}
+.navbar span {
+  color: #6f62e7;
+}
+
+.left,
+.right {
+  text-align: center;
+}
+.left h1,
+.right h1 {
+  margin-top: 1rem;
+}
+.left span,
+.right span {
+  color: #6f62e7;
+}
+.left .list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.left .list img {
+  width: 80px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 2.6px 2.6px 2.6px;
+  margin: 1rem;
+}
+.left .title {
+  font-size: 0.6rem;
+  font-weight: 600;
+  font-family: "Gabarito", sans-serif;
+}
+.left .price {
+  font-size: 0.6rem;
+}
+.left button {
+  background-color: #6f62e7;
+  border-radius: 5px;
+  border: none;
+  padding: 0.4rem 0.5rem;
+  color: #fff;
+  font-family: "Gabarito", sans-serif;
+  margin-top: 0.8rem;
+  font-size: 0.7rem;
+}
+.left button:hover {
+  background-color: rgba(73, 42, 230, 0.491);
+}
+.right {
+}
+.right .order {
+  display: grid;
+  grid-template-columns: 25% 15% auto auto auto;
+  row-gap: 10px;
+  background-color: #f3f3f4;
+  padding: 5px;
+}
+.right .order:nth-child(even) {
+  background-color: #ffffff;
+}
+.order img {
+  margin: auto;
+}
+.order div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+.order .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 0.8rem;
+}
+.order button {
+  background-color: #fff;
+  border: 1px solid #6f62e7;
+  padding: 0.8px 3px;
+  border-radius: 2px;
+  font-size: 0.8rem;
+}
+.order .count {
+  font-size: 0.8rem;
+}
+.details {
+  height: 350px;
+  overflow: scroll;
+}
+.details .icon {
+  border: none;
+  background-color: transparent;
+}
+.details .icon span {
+  color: rgba(255, 0, 0, 0.603);
+}
+.details i {
+  color: #00000060;
+  font-size: 2rem;
+}
+.bill {
+  display: grid;
+  grid-template-columns: 40%auto;
+  gap: 20px;
+  font-weight: bolder;
+  text-align: right;
+}
+.total {
+  font-weight: bolder;
+  text-align: right;
+}
+.total button {
+  background-color: #6f62e7;
+  color: #fff;
+  margin-top: 1rem;
+}
+.total button:hover {
+  background-color: rgba(73, 42, 230, 0.491);
+  color: #fff;
+}
