@@ -11,10 +11,14 @@
 .navbar span {
   color: #6f62e7;
 }
+.navbar .ac {
+  display: none;
+}
 
 .left,
 .right {
   text-align: center;
+  width: 50%;
 }
 .left h1,
 .right h1 {
@@ -23,6 +27,12 @@
 .left span,
 .right span {
   color: #6f62e7;
+}
+.left .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .left .list {
   display: flex;
@@ -60,7 +70,7 @@
 }
 .right .order {
   display: grid;
-  grid-template-columns: 25% 15% auto auto auto;
+  grid-template-columns: 25% 15% 25% auto auto;
   row-gap: 10px;
   background-color: #f3f3f4;
   padding: 5px;
@@ -127,4 +137,51 @@
 .total button:hover {
   background-color: rgba(73, 42, 230, 0.491);
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar .ac span {
+    font-size: 2rem;
+  }
+
+  .navbar .ac {
+    display: flex;
+    position: relative;
+    right: -2%;
+  }
+  .navbar .cart {
+    position: relative;
+    height: 22px;
+    right: 23%;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 5px;
+    background-color: red;
+    border-radius: 60px;
+    z-index: 2;
+  }
+  .navbar b {
+    cursor: pointer;
+  }
+  .right,
+  .left {
+    width: 100%;
+    text-align: center;
+  }
+  .left {
+    position: fixed;
+    z-index: 1;
+  }
+  .left .detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .right {
+    display: block;
+  }
+  .right.active {
+    display: none;
+  }
 }

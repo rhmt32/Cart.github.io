@@ -1,40 +1,5 @@
-let list = document.querySelector(".list");
-let body = document.querySelector("body");
-let right = document.querySelector(".details");
-let show = document.querySelector(".right");
 let total = document.querySelector(".total");
-let close = document.querySelector(".order");
-let col = document.querySelector(".right");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
-
-let initApp = () => {
-  return (list.innerHTML = products
-    .map((x) => {
-      let { id, name, image, price } = x;
-
-      return `<div class="detail">
-            <img src="${image}" >
-            <div class="title">${name}</div>
-            <div class="price">Rp. ${price.toLocaleString()}</div>
-            <button onclick="addToCard(${id})" title="Add To Cart">Add To Cart</button></div>`;
-    })
-    .join(""));
-};
-initApp();
-let addToCard = (id) => {
-  let positionThisProductInCart = basket.find((value) => value.id === id);
-  if (positionThisProductInCart === undefined) {
-    basket.push({
-      id: id,
-      item: 1,
-    });
-  } else {
-    positionThisProductInCart.item += 1;
-  }
-  reloadCard2();
-  update(id);
-  localStorage.setItem("data", JSON.stringify(basket));
-};
 
 let reloadCard2 = () => {
   if (basket.length !== 0) {
@@ -133,8 +98,3 @@ let calculation = () => {
   icon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
 calculation();
-
-const openCart = document.querySelector(".right");
-document.querySelector(".material-symbols-outlined").onclick = () => {
-  openCart.classList.remove("active");
-};
