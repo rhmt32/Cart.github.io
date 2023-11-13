@@ -1,4 +1,5 @@
 let total = document.querySelector(".total");
+let right = document.querySelector(".details");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let reloadCard2 = () => {
